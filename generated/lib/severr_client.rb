@@ -22,29 +22,29 @@ limitations under the License.
 =end
 
 # Common files
-require 'swagger_client/api_client'
-require 'swagger_client/api_error'
-require 'swagger_client/version'
-require 'swagger_client/configuration'
+require 'severr_client/api_client'
+require 'severr_client/api_error'
+require 'severr_client/version'
+require 'severr_client/configuration'
 
 # Models
-require 'swagger_client/models/app_event'
-require 'swagger_client/models/custom_data'
-require 'swagger_client/models/custom_double_data'
-require 'swagger_client/models/custom_string_data'
-require 'swagger_client/models/error'
-require 'swagger_client/models/inner_stack_trace'
-require 'swagger_client/models/stack_trace_line'
-require 'swagger_client/models/stack_trace_lines'
-require 'swagger_client/models/stacktrace'
+require 'severr_client/models/app_event'
+require 'severr_client/models/custom_data'
+require 'severr_client/models/custom_double_data'
+require 'severr_client/models/custom_string_data'
+require 'severr_client/models/error'
+require 'severr_client/models/inner_stack_trace'
+require 'severr_client/models/stack_trace_line'
+require 'severr_client/models/stack_trace_lines'
+require 'severr_client/models/stacktrace'
 
 # APIs
-require 'swagger_client/api/events_api'
+require 'severr_client/api/events_api'
 
-module SwaggerClient
+module Severr
   class << self
     # Customize default settings for the SDK using block.
-    #   SwaggerClient.configure do |config|
+    #   Severr.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

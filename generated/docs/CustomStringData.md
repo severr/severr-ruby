@@ -1,4 +1,4 @@
-# SwaggerClient::CustomStringData
+# Severr::CustomStringData
 
 ## Properties
 Name | Type | Description | Notes

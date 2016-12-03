@@ -21,6 +21,6 @@ limitations under the License.
 
 =end
 
-module SwaggerClient
+module Severr
   VERSION = "1.0.0"
 end

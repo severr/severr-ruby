@@ -24,11 +24,11 @@ limitations under the License.
 =end
 
 $:.push File.expand_path("../lib", __FILE__)
-require "swagger_client/version"
+require "severr_client/version"
 
 Gem::Specification.new do |s|
-  s.name        = "swagger_client"
-  s.version     = SwaggerClient::VERSION
+  s.name        = "severr_client"
+  s.version     = Severr::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = [""]

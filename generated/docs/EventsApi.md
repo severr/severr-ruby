@@ -1,4 +1,4 @@
-# SwaggerClient::EventsApi
+# Severr::EventsApi
 
 All URIs are relative to *https://www.severr.io/api/v1*
 
@@ -17,17 +17,17 @@ Submit an application event or error to Severr
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'severr_client'
 
-api_instance = SwaggerClient::EventsApi.new
+api_instance = Severr::EventsApi.new
 
-data = SwaggerClient::AppEvent.new # AppEvent | Event to submit
+data = Severr::AppEvent.new # AppEvent | Event to submit
 
 
 begin
   #Submit an application event or error to Severr
   api_instance.events_post(data)
-rescue SwaggerClient::ApiError => e
+rescue Severr::ApiError => e
   puts "Exception when calling EventsApi->events_post: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::CustomDoubleData
+# Severr::CustomDoubleData
 
 ## Properties
 Name | Type | Description | Notes

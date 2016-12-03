@@ -23,14 +23,14 @@ limitations under the License.
 
 require 'spec_helper'
 
-describe SwaggerClient::Configuration do
-  let(:config) { SwaggerClient::Configuration.default }
+describe Severr::Configuration do
+  let(:config) { Severr::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     #require 'URI'
     #uri = URI.parse("https://www.severr.io/api/v1")
-    #SwaggerClient.configure do |c|
+    #Severr.configure do |c|
     #  c.host = uri.host
     #  c.base_path = uri.path
     #end

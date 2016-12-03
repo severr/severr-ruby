@@ -23,7 +23,7 @@ limitations under the License.
 
 require "uri"
 
-module SwaggerClient
+module Severr
   class EventsApi
     attr_accessor :api_client
 

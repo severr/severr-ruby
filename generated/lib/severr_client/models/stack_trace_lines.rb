@@ -23,31 +23,19 @@ limitations under the License.
 
 require 'date'
 
-module SwaggerClient
+module Severr
 
-  class StackTraceLine
-    attr_accessor :function
-
-    attr_accessor :line
-
-    attr_accessor :file
-
+  class StackTraceLines
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'function' => :'function',
-        :'line' => :'line',
-        :'file' => :'file'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'function' => :'String',
-        :'line' => :'Integer',
-        :'file' => :'String'
       }
     end
 
@@ -58,18 +46,6 @@ module SwaggerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'function')
-        self.function = attributes[:'function']
-      end
-
-      if attributes.has_key?(:'line')
-        self.line = attributes[:'line']
-      end
-
-      if attributes.has_key?(:'file')
-        self.file = attributes[:'file']
-      end
 
     end
 
@@ -90,10 +66,7 @@ module SwaggerClient
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class &&
-          function == o.function &&
-          line == o.line &&
-          file == o.file
+      self.class == o.class
     end
 
     # @see the `==` method
@@ -105,7 +78,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [function, line, file].hash
+      [].hash
     end
 
     # Builds the object from hash
@@ -165,7 +138,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Severr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

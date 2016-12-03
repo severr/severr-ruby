@@ -23,7 +23,7 @@ limitations under the License.
 
 require 'uri'
 
-module SwaggerClient
+module Severr
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

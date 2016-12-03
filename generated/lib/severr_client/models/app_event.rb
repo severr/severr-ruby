@@ -23,7 +23,7 @@ limitations under the License.
 
 require 'date'
 
-module SwaggerClient
+module Severr
 
   class AppEvent
     # API key generated for the application
@@ -339,7 +339,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Severr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

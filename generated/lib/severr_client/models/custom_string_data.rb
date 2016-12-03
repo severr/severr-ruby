@@ -23,9 +23,9 @@ limitations under the License.
 
 require 'date'
 
-module SwaggerClient
+module Severr
 
-  class CustomDoubleData
+  class CustomStringData
     attr_accessor :custom_data1
 
     attr_accessor :custom_data2
@@ -66,16 +66,16 @@ module SwaggerClient
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'custom_data1' => :'Float',
-        :'custom_data2' => :'Float',
-        :'custom_data3' => :'Float',
-        :'custom_data4' => :'Float',
-        :'custom_data5' => :'Float',
-        :'custom_data6' => :'Float',
-        :'custom_data7' => :'Float',
-        :'custom_data8' => :'Float',
-        :'custom_data9' => :'Float',
-        :'custom_data10' => :'Float'
+        :'custom_data1' => :'String',
+        :'custom_data2' => :'String',
+        :'custom_data3' => :'String',
+        :'custom_data4' => :'String',
+        :'custom_data5' => :'String',
+        :'custom_data6' => :'String',
+        :'custom_data7' => :'String',
+        :'custom_data8' => :'String',
+        :'custom_data9' => :'String',
+        :'custom_data10' => :'String'
       }
     end
 
@@ -228,7 +228,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Severr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

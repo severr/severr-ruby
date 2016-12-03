@@ -1,4 +1,4 @@
-# SwaggerClient::AppEvent
+# Severr::AppEvent
 
 ## Properties
 Name | Type | Description | Notes

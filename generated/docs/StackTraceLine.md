@@ -1,4 +1,4 @@
-# SwaggerClient::StackTraceLine
+# Severr::StackTraceLine
 
 ## Properties
 Name | Type | Description | Notes

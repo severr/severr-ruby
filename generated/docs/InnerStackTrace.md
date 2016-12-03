@@ -1,4 +1,4 @@
-# SwaggerClient::InnerStackTrace
+# Severr::InnerStackTrace
 
 ## Properties
 Name | Type | Description | Notes

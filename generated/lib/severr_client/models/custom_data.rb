@@ -23,7 +23,7 @@ limitations under the License.
 
 require 'date'
 
-module SwaggerClient
+module Severr
   # (optional) Custom string or double data to submit along with the event. This data can then be used in the Severr UI to view segmented data.
   class CustomData
     attr_accessor :string_data
@@ -156,7 +156,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Severr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end
