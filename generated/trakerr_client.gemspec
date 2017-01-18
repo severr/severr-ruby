@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 #
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -24,18 +24,17 @@ limitations under the License.
 =end
 
 $:.push File.expand_path("../lib", __FILE__)
-$:.push File.expand_path("../generated/lib", __FILE__)
-$:.push File.expand_path("../severr/lib", __FILE__)
+require "trakerr_client/version"
 
 Gem::Specification.new do |s|
-  s.name        = "severr_client"
-  s.version     = "1.0.0"
+  s.name        = "trakerr_client"
+  s.version     = Trakerr::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = [""]
   s.homepage    = "https://github.com/swagger-api/swagger-codegen"
-  s.summary     = "Severr API Ruby Gem"
-  s.description = "Get your application events and errors to Severr via the *Severr API*."
+  s.summary     = "Trakerr API Ruby Gem"
+  s.description = "Get your application events and errors to Trakerr via the *Trakerr API*."
   s.license     = "Apache 2.0"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
@@ -50,7 +49,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'autotest-fsevent', '~> 0.2', '>= 0.2.11'
 
   s.files         = `find *`.split("\n").uniq.sort.select{|f| !f.empty? }
-  s.test_files    = `find generated/spec/*`.split("\n")
+  s.test_files    = `find spec/*`.split("\n")
   s.executables   = []
-  s.require_paths = ["generated/lib", "severr/lib"]
+  s.require_paths = ["lib"]
 end

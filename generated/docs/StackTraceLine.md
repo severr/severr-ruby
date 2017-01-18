@@ -1,4 +1,4 @@
-# Severr::StackTraceLine
+# Trakerr::StackTraceLine
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Severr::InnerStackTrace
+# Trakerr::InnerStackTrace
 
 ## Properties
 Name | Type | Description | Notes

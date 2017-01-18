@@ -1,10 +1,10 @@
 
-require "severr_client"
+require "trakerr_client"
 require "Socket"
 require "date"
 
-module Severr
-  class SeverrClient
+module Trakerr
+  class TrakerrClient
     def initialize(apiKey,
                    url= nil,
                    contextAppVersion = "1.0",
@@ -17,7 +17,7 @@ module Severr
                    contextAppBrowserVersion= nil,
                    contextDataCenter= nil,
                    contextDataCenterRegion= nil)
-      default_config = Severr::Configuration.default
+      default_config = Trakerr::Configuration.default
       default_config.base_path = url || default_config.base_path
       @apiKey = apiKey
       @contextAppVersion = contextAppVersion
@@ -30,8 +30,8 @@ module Severr
       @contextAppBrowserVersion = contextAppBrowserVersion
       @contextDataCenter = contextDataCenter
       @contextDataCenterRegion = contextDataCenterRegion
-      api_client = Severr::ApiClient.new(default_config)
-      @events_api = Severr::EventsApi.new(api_client)
+      api_client = Trakerr::ApiClient.new(default_config)
+      @events_api = Trakerr::EventsApi.new(api_client)
     end
 
     def CreateAppEvent(classification = "Error", eventType = "unknown", eventMessage = "unknown")

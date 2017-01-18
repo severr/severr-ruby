@@ -1,4 +1,4 @@
-# Severr::AppEvent
+# Trakerr::AppEvent
 
 ## Properties
 Name | Type | Description | Notes

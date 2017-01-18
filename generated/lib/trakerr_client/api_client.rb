@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -28,7 +28,7 @@ require 'tempfile'
 require 'typhoeus'
 require 'uri'
 
-module Severr
+module Trakerr
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -207,7 +207,7 @@ module Severr
         end
       else
         # models, e.g. Pet
-        Severr.const_get(return_type).new.tap do |model|
+        Trakerr.const_get(return_type).new.tap do |model|
           model.build_from_hash data
         end
       end

@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -22,29 +22,29 @@ limitations under the License.
 =end
 
 # Common files
-require 'severr_client/api_client'
-require 'severr_client/api_error'
-require 'severr_client/version'
-require 'severr_client/configuration'
+require 'trakerr_client/api_client'
+require 'trakerr_client/api_error'
+require 'trakerr_client/version'
+require 'trakerr_client/configuration'
 
 # Models
-require 'severr_client/models/app_event'
-require 'severr_client/models/custom_data'
-require 'severr_client/models/custom_double_data'
-require 'severr_client/models/custom_string_data'
-require 'severr_client/models/error'
-require 'severr_client/models/inner_stack_trace'
-require 'severr_client/models/stack_trace_line'
-require 'severr_client/models/stack_trace_lines'
-require 'severr_client/models/stacktrace'
+require 'trakerr_client/models/app_event'
+require 'trakerr_client/models/custom_data'
+require 'trakerr_client/models/custom_double_data'
+require 'trakerr_client/models/custom_string_data'
+require 'trakerr_client/models/error'
+require 'trakerr_client/models/inner_stack_trace'
+require 'trakerr_client/models/stack_trace_line'
+require 'trakerr_client/models/stack_trace_lines'
+require 'trakerr_client/models/stacktrace'
 
 # APIs
-require 'severr_client/api/events_api'
+require 'trakerr_client/api/events_api'
 
-module Severr
+module Trakerr
   class << self
     # Customize default settings for the SDK using block.
-    #   Severr.configure do |config|
+    #   Trakerr.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

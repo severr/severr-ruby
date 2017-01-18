@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -23,7 +23,7 @@ limitations under the License.
 
 require 'date'
 
-module Severr
+module Trakerr
 
   class AppEvent
     # API key generated for the application
@@ -339,7 +339,7 @@ module Severr
           end
         end
       else # model
-        temp_model = Severr.const_get(type).new
+        temp_model = Trakerr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

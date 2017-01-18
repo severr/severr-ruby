@@ -1,4 +1,4 @@
-sudo gem uninstall severr_client
-rm severr_client*.gem
-gem build severr_client.gemspec
-sudo gem install severr_client
+sudo gem uninstall trakerr_client
+rm trakerr_client*.gem
+gem build trakerr_client.gemspec
+sudo gem install trakerr_client

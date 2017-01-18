@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -23,31 +23,59 @@ limitations under the License.
 
 require 'date'
 
-module Severr
+module Trakerr
 
-  class InnerStackTrace
-    attr_accessor :type
+  class CustomDoubleData
+    attr_accessor :custom_data1
 
-    attr_accessor :message
+    attr_accessor :custom_data2
 
-    attr_accessor :trace_lines
+    attr_accessor :custom_data3
+
+    attr_accessor :custom_data4
+
+    attr_accessor :custom_data5
+
+    attr_accessor :custom_data6
+
+    attr_accessor :custom_data7
+
+    attr_accessor :custom_data8
+
+    attr_accessor :custom_data9
+
+    attr_accessor :custom_data10
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'type' => :'type',
-        :'message' => :'message',
-        :'trace_lines' => :'traceLines'
+        :'custom_data1' => :'customData1',
+        :'custom_data2' => :'customData2',
+        :'custom_data3' => :'customData3',
+        :'custom_data4' => :'customData4',
+        :'custom_data5' => :'customData5',
+        :'custom_data6' => :'customData6',
+        :'custom_data7' => :'customData7',
+        :'custom_data8' => :'customData8',
+        :'custom_data9' => :'customData9',
+        :'custom_data10' => :'customData10'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'type' => :'String',
-        :'message' => :'String',
-        :'trace_lines' => :'StackTraceLines'
+        :'custom_data1' => :'Float',
+        :'custom_data2' => :'Float',
+        :'custom_data3' => :'Float',
+        :'custom_data4' => :'Float',
+        :'custom_data5' => :'Float',
+        :'custom_data6' => :'Float',
+        :'custom_data7' => :'Float',
+        :'custom_data8' => :'Float',
+        :'custom_data9' => :'Float',
+        :'custom_data10' => :'Float'
       }
     end
 
@@ -59,16 +87,44 @@ module Severr
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'customData1')
+        self.custom_data1 = attributes[:'customData1']
       end
 
-      if attributes.has_key?(:'message')
-        self.message = attributes[:'message']
+      if attributes.has_key?(:'customData2')
+        self.custom_data2 = attributes[:'customData2']
       end
 
-      if attributes.has_key?(:'traceLines')
-        self.trace_lines = attributes[:'traceLines']
+      if attributes.has_key?(:'customData3')
+        self.custom_data3 = attributes[:'customData3']
+      end
+
+      if attributes.has_key?(:'customData4')
+        self.custom_data4 = attributes[:'customData4']
+      end
+
+      if attributes.has_key?(:'customData5')
+        self.custom_data5 = attributes[:'customData5']
+      end
+
+      if attributes.has_key?(:'customData6')
+        self.custom_data6 = attributes[:'customData6']
+      end
+
+      if attributes.has_key?(:'customData7')
+        self.custom_data7 = attributes[:'customData7']
+      end
+
+      if attributes.has_key?(:'customData8')
+        self.custom_data8 = attributes[:'customData8']
+      end
+
+      if attributes.has_key?(:'customData9')
+        self.custom_data9 = attributes[:'customData9']
+      end
+
+      if attributes.has_key?(:'customData10')
+        self.custom_data10 = attributes[:'customData10']
       end
 
     end
@@ -91,9 +147,16 @@ module Severr
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          type == o.type &&
-          message == o.message &&
-          trace_lines == o.trace_lines
+          custom_data1 == o.custom_data1 &&
+          custom_data2 == o.custom_data2 &&
+          custom_data3 == o.custom_data3 &&
+          custom_data4 == o.custom_data4 &&
+          custom_data5 == o.custom_data5 &&
+          custom_data6 == o.custom_data6 &&
+          custom_data7 == o.custom_data7 &&
+          custom_data8 == o.custom_data8 &&
+          custom_data9 == o.custom_data9 &&
+          custom_data10 == o.custom_data10
     end
 
     # @see the `==` method
@@ -105,7 +168,7 @@ module Severr
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, message, trace_lines].hash
+      [custom_data1, custom_data2, custom_data3, custom_data4, custom_data5, custom_data6, custom_data7, custom_data8, custom_data9, custom_data10].hash
     end
 
     # Builds the object from hash
@@ -165,7 +228,7 @@ module Severr
           end
         end
       else # model
-        temp_model = Severr.const_get(type).new
+        temp_model = Trakerr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

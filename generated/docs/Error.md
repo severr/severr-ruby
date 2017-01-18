@@ -1,4 +1,4 @@
-# Severr::Error
+# Trakerr::Error
 
 ## Properties
 Name | Type | Description | Notes

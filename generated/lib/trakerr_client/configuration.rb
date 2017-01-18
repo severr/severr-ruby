@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -23,7 +23,7 @@ limitations under the License.
 
 require 'uri'
 
-module Severr
+module Trakerr
   class Configuration
     # Defines url scheme
     attr_accessor :scheme
@@ -135,7 +135,7 @@ module Severr
 
     def initialize
       @scheme = 'https'
-      @host = 'www.severr.io'
+      @host = 'www.trakerr.io'
       @base_path = '/api/v1'
       @api_key = {}
       @api_key_prefix = {}

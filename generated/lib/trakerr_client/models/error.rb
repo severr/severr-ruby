@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -23,27 +23,31 @@ limitations under the License.
 
 require 'date'
 
-module Severr
-  # (optional) Custom string or double data to submit along with the event. This data can then be used in the Severr UI to view segmented data.
-  class CustomData
-    attr_accessor :string_data
+module Trakerr
 
-    attr_accessor :double_data
+  class Error
+    attr_accessor :code
+
+    attr_accessor :message
+
+    attr_accessor :fields
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'string_data' => :'stringData',
-        :'double_data' => :'doubleData'
+        :'code' => :'code',
+        :'message' => :'message',
+        :'fields' => :'fields'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'string_data' => :'CustomStringData',
-        :'double_data' => :'CustomDoubleData'
+        :'code' => :'Integer',
+        :'message' => :'String',
+        :'fields' => :'String'
       }
     end
 
@@ -55,12 +59,16 @@ module Severr
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'stringData')
-        self.string_data = attributes[:'stringData']
+      if attributes.has_key?(:'code')
+        self.code = attributes[:'code']
       end
 
-      if attributes.has_key?(:'doubleData')
-        self.double_data = attributes[:'doubleData']
+      if attributes.has_key?(:'message')
+        self.message = attributes[:'message']
+      end
+
+      if attributes.has_key?(:'fields')
+        self.fields = attributes[:'fields']
       end
 
     end
@@ -83,8 +91,9 @@ module Severr
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          string_data == o.string_data &&
-          double_data == o.double_data
+          code == o.code &&
+          message == o.message &&
+          fields == o.fields
     end
 
     # @see the `==` method
@@ -96,7 +105,7 @@ module Severr
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [string_data, double_data].hash
+      [code, message, fields].hash
     end
 
     # Builds the object from hash
@@ -156,7 +165,7 @@ module Severr
           end
         end
       else # model
-        temp_model = Severr.const_get(type).new
+        temp_model = Trakerr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

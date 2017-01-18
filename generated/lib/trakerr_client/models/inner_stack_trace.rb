@@ -1,7 +1,7 @@
 =begin
-#Severr API
+#Trakerr API
 
-#Get your application events and errors to Severr via the *Severr API*.
+#Get your application events and errors to Trakerr via the *Trakerr API*.
 
 OpenAPI spec version: 1.0.0
 
@@ -23,19 +23,31 @@ limitations under the License.
 
 require 'date'
 
-module Severr
+module Trakerr
 
-  class StackTraceLines
+  class InnerStackTrace
+    attr_accessor :type
+
+    attr_accessor :message
+
+    attr_accessor :trace_lines
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'type' => :'type',
+        :'message' => :'message',
+        :'trace_lines' => :'traceLines'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'type' => :'String',
+        :'message' => :'String',
+        :'trace_lines' => :'StackTraceLines'
       }
     end
 
@@ -46,6 +58,18 @@ module Severr
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'message')
+        self.message = attributes[:'message']
+      end
+
+      if attributes.has_key?(:'traceLines')
+        self.trace_lines = attributes[:'traceLines']
+      end
 
     end
 
@@ -66,7 +90,10 @@ module Severr
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class
+      self.class == o.class &&
+          type == o.type &&
+          message == o.message &&
+          trace_lines == o.trace_lines
     end
 
     # @see the `==` method
@@ -78,7 +105,7 @@ module Severr
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [].hash
+      [type, message, trace_lines].hash
     end
 
     # Builds the object from hash
@@ -138,7 +165,7 @@ module Severr
           end
         end
       else # model
-        temp_model = Severr.const_get(type).new
+        temp_model = Trakerr.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

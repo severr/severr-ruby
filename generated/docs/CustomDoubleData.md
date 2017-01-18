@@ -1,4 +1,4 @@
-# Severr::CustomDoubleData
+# Trakerr::CustomDoubleData
 
 ## Properties
 Name | Type | Description | Notes
